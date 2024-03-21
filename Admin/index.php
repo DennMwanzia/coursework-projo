@@ -10,6 +10,10 @@
     <title>Adminstrator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>.productimg{
+        width:30%;
+        object-fit:contain;
+    }</style>
 </head>
 <body>
 <div class="container-fluid p-0">
@@ -32,21 +36,22 @@
         <div class="row">
             <div class="col-md-12 bg-secondary p-1 d-flex align-items-center">
                 <a href="#"><img src="" alt="" class="adminimg"></a>
-                <p class="text-light text-center">Admin name</p>
+                <p class="text-light text-center m-3">Admin name</p>
+                <div class="button text-center">
+                <button><a href="insertproducts.php" class="bg-info border-0 p-2 my-2"> Insert  product</a></button>
+                <button><a href="index.php?viewproducts" class="nav-lin text-light bg-info my-1">View products</a></button>
+                <button><a href="index.php?insert_category" class="nav-lin text-light bg-info my-1">Insert Categories</a></button>
+                <button><a href="" class="nav-lin text-light bg-info my-1">View categories</a></button>
+                <button><a href="index.php?insert_brands" class="nav-lin text-light bg-info my-1">Insert Brands</a></button>
+                <button><a href="" class="nav-lin text-light bg-info my-1">View brands</a></button>
+                <button><a href="" class="nav-lin text-light bg-info my-1">All orders</a></button>
+                <button><a href="" class="nav-lin text-light bg-info my-1">All payments</a></button>
+                <button><a href="" class="nav-lin text-light bg-info my-1">List users</a></button>
+                <button><a href="" class="nav-lin text-light bg-info my-1">Log out</a></button>
+            </div>
                  
             </div>
-            <div class="button text-center">
-                <button><a href="insertproducts.php" class="nav-lin text-ligh bg-info my-1"> Insert  product</a></button>
-                <button><a href="index.php?viewproducts" class="nav-lin text-ligh bg-info my-1">View products</a></button>
-                <button><a href="index.php?insert_category" class="nav-lin text-ligh bg-info my-1">Insert Categories</a></button>
-                <button><a href="" class="nav-lin text-ligh bg-info my-1">View categories</a></button>
-                <button><a href="index.php?insert_brands" class="nav-lin text-ligh bg-info my-1">Insert Brands</a></button>
-                <button><a href="" class="nav-lin text-ligh bg-info my-1">View brands</a></button>
-                <button><a href="" class="nav-lin text-ligh bg-info my-1">All orders</a></button>
-                <button><a href="" class="nav-lin text-ligh bg-info my-1">All payments</a></button>
-                <button><a href="" class="nav-lin text-ligh bg-info my-1">List users</a></button>
-                <button><a href="" class="nav-lin text-ligh bg-info my-1">Log out</a></button>
-            </div>
+           
 
        </div>
 
