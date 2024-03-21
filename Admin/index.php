@@ -1,3 +1,8 @@
+<?php
+ include('../includes/database.php');
+ include('../commonfun/commonfunkies.php');
+ 
+ ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +37,7 @@
             </div>
             <div class="button text-center">
                 <button><a href="insertproducts.php" class="nav-lin text-ligh bg-info my-1"> Insert  product</a></button>
-                <button><a href="" class="nav-lin text-ligh bg-info my-1">View products</a></button>
+                <button><a href="index.php?viewproducts" class="nav-lin text-ligh bg-info my-1">View products</a></button>
                 <button><a href="index.php?insert_category" class="nav-lin text-ligh bg-info my-1">Insert Categories</a></button>
                 <button><a href="" class="nav-lin text-ligh bg-info my-1">View categories</a></button>
                 <button><a href="index.php?insert_brands" class="nav-lin text-ligh bg-info my-1">Insert Brands</a></button>
@@ -55,6 +60,10 @@
         if(isset($_GET['insert_brands'])){
             include('insert brands.php');
         }
+        if(isset($_GET['viewproducts'])){
+            include('viewproducts.php');
+        }
+
 
         ?>
 </div>

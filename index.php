@@ -27,9 +27,19 @@ session_start();
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./userarea/signup.php">Register</a>
-        </li>
+        <?php
+        if(!isset($_SESSION['username'])){
+          echo "
+          <li class='nav-item'>
+          <a class='nav-link' href='./userarea/profile.php'>My account</a>
+        </li>";
+        }
+        echo "
+          <li class='nav-item'>
+          <a class='nav-link' href='./userarea/signup.php'>Register</a>
+        </li>";
+         ?>
+       
         <li class="nav-item">
           <a class="nav-link" href="displayeverything.php">Products</a>
         </li>

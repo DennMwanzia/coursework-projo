@@ -230,7 +230,37 @@ function getcartno(){
   echo $totalprice;
 
   }
+ 
+  function getorderdetails(){
+    global $con;
+    $username=$_SESSION['username'];
+    $getdetails="select * from user where username='$username'";
+    $resultq=mysqli_query($con,$getdetails);
+    while($rowquer=mysqli_fetch_array($resultq)){
+      $userid=$rowquer['userid'];
+      if(!isset($_GET['editaccount'])){
+        if(!isset($_GET['myorders'])){
+          if(!isset($_GET['deleteaccount'])){
+            $getorders="select * from orders where userid='$userid' and orderstatus ='pending'";
+            $exequery=mysqli_query($con,$getorders);
+            $rowcount=mysqli_num_rows($exequery);
+            if($rowcount>0){
+              echo "<h3 class='text-center text-success mt-5 mb-2'>You have <span class= 'text-danger'>$rowcount</span> pending orders</h3>
+              <p class='text-center' ><a href='profile.php?myorders' class ='text-dark'>Order details</a></p>";
+            }else{
+              echo "<h3 class='text-center text-success mt-5 mb-2'>You have zero pending orders</h3>
+              <p class='text-center' ><a href='../index.php' class ='text-dark'>Shop more</a></p>";
 
+            }
+            
+
+          }
+
+      }
+    }
+  }
+}
+  
 
 
 

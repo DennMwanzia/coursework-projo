@@ -73,11 +73,11 @@ cart();
 
     if(!isset($_SESSION['username'])){
       echo "<li class='nav-item'>
-      <a class='nav-link' href='./userarea/userlogin.php'> Log in
+      <a class='nav-link' href='userlogin.php'> Log in
       </a>";
     }else{
       echo "<li class='nav-item'>
-      <a class='nav-link' href='./userarea/logout.php'> Log out
+      <a class='nav-link' href='logout.php'> Log out
       </a>";
 
     } ?>
@@ -98,8 +98,11 @@ cart();
           Your Profile</a>
           </H4>
           <br>
+
           <br>
         </li>
+        <?php 
+        $username =$_SESSION['username']; ?>
         <li class="nav-item ">
           <a class="nav-link text-light "  href="profile.php?editaccount">
             <br>
@@ -136,8 +139,19 @@ cart();
         </ul>
 
     </div>
-    <div class="col-md-10">
-
+    <div class="col-md-10 ">
+     <?php
+       getorderdetails();
+       if(isset($_GET['editaccount'])){
+        include('editaccount.php');
+       }
+       if(isset($_GET['myorders'])){
+        include('myorders.php');
+       }
+       if(isset($_GET['deleteaccount'])){
+        include('deleteaccount.php');
+       }
+     ?>
     </div>
 
   </div>
