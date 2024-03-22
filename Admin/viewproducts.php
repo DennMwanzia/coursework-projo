@@ -1,3 +1,4 @@
+<?php include('../includes/database.php');?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,8 +45,8 @@
                 $rowcount=mysqli_num_rows($result);
                 echo "$rowcount";
                 ?></td>
-                <td><a href='' class='text-light'><i class='fa-solid fa-pen-to-square'></i></a></td>
-                <td><a href='' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
+                <td><a href='index.php?edit=<?php echo $productid ?>' class='text-light'><i class='fa-solid fa-pen-to-square'></i></a></td>
+                <td><a href='index.php?deleteproduct=<?php echo $productid ?>' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
             </tr>
             <?php
             }
