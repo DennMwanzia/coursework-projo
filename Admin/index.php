@@ -41,7 +41,7 @@
                 <button><a href="insertproducts.php" class="bg-info border-0 p-2 my-2"> Insert  product</a></button>
                 <button><a href="index.php?viewproducts" class="nav-lin text-light bg-info my-1">View products</a></button>
                 <button><a href="index.php?insert_category" class="nav-lin text-light bg-info my-1">Insert Categories</a></button>
-                <button><a href="" class="nav-lin text-light bg-info my-1">View categories</a></button>
+                <button><a href="index.php?viewcategories" class="nav-lin text-light bg-info my-1">View categories</a></button>
                 <button><a href="index.php?insert_brands" class="nav-lin text-light bg-info my-1">Insert Brands</a></button>
                 <button><a href="" class="nav-lin text-light bg-info my-1">View brands</a></button>
                 <button><a href="" class="nav-lin text-light bg-info my-1">All orders</a></button>
@@ -73,6 +73,9 @@
         }
         if(isset($_GET['deleteproduct'])){
             include('deleteproduct.php');
+        }
+        if(isset($_GET['viewcategories'])){
+            include('viewcategories.php');
         }
 
 
