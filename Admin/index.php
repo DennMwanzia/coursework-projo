@@ -77,6 +77,9 @@
         if(isset($_GET['viewcategories'])){
             include('viewcategories.php');
         }
+        if(isset($_GET['editcat'])){
+            include('editcategory.php');
+        }
 
 
 
