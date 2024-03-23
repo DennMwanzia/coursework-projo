@@ -1,3 +1,7 @@
+<?php 
+session_start();
+include('../includes/database.php');
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,12 +23,12 @@
         <form action="" method="post">
             <div class="form-outline mb-4 w-50 m-auto">
                 <label for="username" class ="form-label">Username</label>
-                <input type="text"id="username" name="username" value="enter username" required class="form-control">
+                <input type="text"id="username" name="username" value="" required class="form-control" placeholder="enter your username">
 
             </div>
             <div class="form-outline mb-4 w-50 m-auto">
                 <label for="email" class ="form-label">Email address</label>
-                <input type="text"id="email" name="emaill" value="enter your email" required class="form-control">
+                <input type="text"id="email" name="emaill" value="" required class="form-control" placeholder="enter your email">
 
             </div>
             <div class="form-outline mb-4 w-50 m-auto">
@@ -54,3 +58,36 @@
     </div>
 </body>
 </html>
+
+<?php
+if (isset($_POST['adminreg'])){
+    $uusername =$_POST['username'];
+    $email =$_POST['emaill'];
+    $pass =$_POST['password'];
+    $hashing =password_hash($pass,PASSWORD_DEFAULT);
+    $confirm=$_POST['confirm'];
+    
+    $selectquery="select * from adminreg where username ='$uusername' or email ='$email'";
+    $result =mysqli_query($con,$selectquery);
+    $rowcount =mysqli_num_rows($result);
+
+    if($rowcount>0){
+        echo "<script>alert('username  or email already exits')</script>";
+    } 
+    elseif( $pass!=  $confirm){
+        echo "<script>alert('password do not match!')</script>";
+
+    }
+    else{
+        $insert = "insert into adminreg (username,email,password) values('$uusername','$email','$hashing')";
+
+        $resultquery =mysqli_query($con,$insert);
+        if($resultquery){
+           echo "<script>alert('admin registered')</script>";
+           echo "<script>window.open('adminlogin.php','_self')</script>";
+        
+        }
+
+        
+    }
+}
