@@ -42,11 +42,9 @@
                 <button><a href="index.php?viewproducts" class="nav-lin text-light bg-info my-1">View products</a></button>
                 <button><a href="index.php?insert_category" class="nav-lin text-light bg-info my-1">Insert Categories</a></button>
                 <button><a href="index.php?viewcategories" class="nav-lin text-light bg-info my-1">View categories</a></button>
-                <button><a href="index.php?insert_brands" class="nav-lin text-light bg-info my-1">Insert Brands</a></button>
-                <button><a href="" class="nav-lin text-light bg-info my-1">View brands</a></button>
-                <button><a href="" class="nav-lin text-light bg-info my-1">All orders</a></button>
-                <button><a href="" class="nav-lin text-light bg-info my-1">All payments</a></button>
-                <button><a href="" class="nav-lin text-light bg-info my-1">List users</a></button>
+                <button><a href="index.php?listorders" class="nav-lin text-light bg-info my-1">All orders</a></button>
+                <button><a href="index.php?allpays" class="nav-lin text-light bg-info my-1">All payments</a></button>
+                <button><a href="index.php?listuser" class="nav-lin text-light bg-info my-1">List users</a></button>
                 <button><a href="" class="nav-lin text-light bg-info my-1">Log out</a></button>
             </div>
                  
@@ -80,6 +78,22 @@
         if(isset($_GET['editcat'])){
             include('editcategory.php');
         }
+        if(isset($_GET['dltcat'])){
+            include('deletecategory.php');
+        }
+        if(isset($_GET['listorders'])){
+            include('allorders.php');
+        }
+        if(isset($_GET['dltorders'])){
+            include('deleteorders.php');
+        }
+        if(isset($_GET['allpays'])){
+            include('allpayments.php');
+        }
+        if(isset($_GET['listuser'])){
+            include('listusers.php');
+        }
+
 
 
 
@@ -95,5 +109,9 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

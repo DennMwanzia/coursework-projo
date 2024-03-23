@@ -24,7 +24,7 @@
             <td><?php echo $number ?></td>
             <td><?php echo $categorytitle ?></td>
             <td><a href='index.php?editcat=<?php echo $categoryid ?>' class='text-light'><i class='fa-solid fa-pen-to-square'></i></a></td>
-                <td><a href='i' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
+            <td><a href='index.php?dltcat=<?php echo $categoryid ?>' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
         </tr>
         <?php 
         }
