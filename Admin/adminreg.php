@@ -23,22 +23,22 @@ include('../includes/database.php');
         <form action="" method="post">
             <div class="form-outline mb-4 w-50 m-auto">
                 <label for="username" class ="form-label">Username</label>
-                <input type="text"id="username" name="username" value="" required class="form-control" placeholder="enter your username">
+                <input type="text"id="username" name="username" value="" required class="form-control" placeholder="enter your username" autocomplete="off">
 
             </div>
             <div class="form-outline mb-4 w-50 m-auto">
                 <label for="email" class ="form-label">Email address</label>
-                <input type="text"id="email" name="emaill" value="" required class="form-control" placeholder="enter your email">
+                <input type="text"id="email" name="emaill" value="" required class="form-control" placeholder="enter your email"autocomplete="off">
 
             </div>
             <div class="form-outline mb-4 w-50 m-auto">
                 <label for="pass" class ="form-label">Password</label>
-                <input type="password"id="passw" name="password" value="" required class="form-control">
+                <input type="password"id="pass" name="password" value="" required class="form-control"autocomplete="off">
 
             </div>
             <div class="form-outline mb-4 w-50 m-auto">
                 <label for="conf" class ="form-label">Confirm Password</label>
-                <input type="password"id="username" name="confirm" value="" required class="form-control">
+                <input type="password"id="username" name="confirm" value="" required class="form-control"autocomplete="off">
 
             </div>
            
