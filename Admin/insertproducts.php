@@ -67,7 +67,7 @@ if(isset($_POST['insertproduct'])){
 
             <div class ="form-outline mb-4 w-50 m-auto">
                 <select name="productcategory" id="" class="form-select">
-                    <option Value="">Select a Category1</option>
+                    
                    
                    <?php
                     $select = "select  * from categories";
@@ -78,10 +78,7 @@ if(isset($_POST['insertproduct'])){
                     echo "<option value='$categoryid'>$categorytitle</option>";
                     }
                     ?>
-<!-- 
-                    <option Value="">Select a Category2</option>
-                    <option Value="">Select a Category3</option>
-                    <option Value="">Select a Category4</option> -->
+            
                 </select>
             </div>
 

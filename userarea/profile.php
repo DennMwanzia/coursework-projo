@@ -27,12 +27,7 @@ session_start();
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="profile.php">My account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../displayeverything.php">Products</a>
-        </li>
+      
         
         <li class="nav-item">
           <a class="nav-link " href="../cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php getcartno();?></sup></i></a>
@@ -71,16 +66,17 @@ cart();
 
     }
 
-    if(!isset($_SESSION['username'])){
-      echo "<li class='nav-item'>
-      <a class='nav-link' href='userlogin.php'> Log in
-      </a>";
-    }else{
-      echo "<li class='nav-item'>
-      <a class='nav-link' href='logout.php'> Log out
-      </a>";
+    // if(!isset($_SESSION['username'])){
+    //   echo "<li class='nav-item'>
+    //   <a class='nav-link' href='userlogin.php'> Log in
+    //   </a>";
+    // }else{
+    //   echo "<li class='nav-item'>
+    //   <a class='nav-link' href='logout.php'> Log out
+    //   </a>";
 
-    } ?>
+    // } 
+    ?>
     
   </ul>
   </nav>
@@ -95,7 +91,7 @@ cart();
           <a class="nav-link text-light "  href="#">
             <br>
             <H4>
-          Your Profile</a>
+          Profile</a>
           </H4>
           <br>
 

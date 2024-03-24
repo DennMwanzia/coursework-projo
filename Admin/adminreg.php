@@ -28,7 +28,7 @@ include('../includes/database.php');
             </div>
             <div class="form-outline mb-4 w-50 m-auto">
                 <label for="email" class ="form-label">Email address</label>
-                <input type="text"id="email" name="emaill" value="" required class="form-control" placeholder="enter your email"autocomplete="off">
+                <input type="email"id="email" name="emaill" value="" required class="form-control" placeholder="enter your email"autocomplete="off">
 
             </div>
             <div class="form-outline mb-4 w-50 m-auto">

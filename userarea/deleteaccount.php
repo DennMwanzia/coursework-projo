@@ -32,7 +32,7 @@ if(isset($_POST['delete'])){
     }
 
 }
-if(isset($_POST['dontdelte'])){
+if(isset($_POST['dontdelete'])){
     echo "<script>window.open('profile.php','_self')</script>";
 
 }
