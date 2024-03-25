@@ -38,7 +38,7 @@ function getuniquecategories(){
   global $con;
   if(isset($_GET['category'])){
     $categoryid=$_GET['category'];
-    $select_query="select * from products where categoryid=$cateogryid";
+    $select_query="select * from products where categoryid=$categoryid";
         $result_query= mysqli_query($con,$select_query);
 
         $count =mysqli_num_rows($result_query); 
@@ -113,7 +113,7 @@ function getcategories(){
           $cat_title=$row_data['categoryId'];
           $categoryid=$row_data['categorytitle'];
           echo "<li class ='nav-item'>
-          <a href='#' class ='nav-link text-light'>$categoryid</a>
+          <a href='index.php?category=$cat_title' class ='nav-link text-light'>$categoryid</a>
       </li>";
          }
 } 

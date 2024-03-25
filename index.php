@@ -34,7 +34,7 @@ session_start();
         if(!isset($_SESSION['username'])){
           echo "
           <li class='nav-item'>
-          <a class='nav-link' href='./userarea/profile.php'>My account</a>
+          <a class='nav-link' href='./userarea/profile.php'></a>
         </li>";
         }
         echo "
@@ -107,11 +107,11 @@ cart();
       <div class ="col-md bg-info p-0">
         <ul class ="navbar-nav me-auto text-center">
         <li class=" nav-item bg-secondary">
-        <a href="#" class ="nav-link text-light"><h3>Categories</h3></a>
+        <a href="" class ="nav-link text-light"><h3>Categories</h3></a>
       </li>
           <?php
           getcategories();
-          getuniquecategories();
+          
 
           ?> 
       </ul>
@@ -126,7 +126,8 @@ cart();
         <?php
 
       getproducts();
-      $ip = getIPAddress();  
+      $ip = getIPAddress(); 
+      getuniquecategories(); 
        
         ?>
       <!-- row ending div -->

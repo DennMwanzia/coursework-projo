@@ -46,14 +46,14 @@ if(isset($_GET['userid'])){
         echo "<script>window.open('profile.php','_self')</script>";
 
     }
-    $insertorderspending ="insert into orderspending(userid,invoiceNo,productid,quantity,orderstatus)values($userid,$invoicenumber,$productid,$quntity,$status')";
+    $insertorderspending ="insert into orderspending(userid,invoiceNo,productid,quantity,orderstatus)values($userid,$invoicenumber,$productid,$quantity,'$status')";
 
-    $resultpending=mysqli_query($con,$insertorderspending);
+    $resultorderspending=mysqli_query($con,$insertorderspending);
+
+    $emptycart="delete from cart where ipaddr='$ip'";
+    $exe=mysqli_query($con,$emptycart);
 
 
-     $emptycart ="delete from cart where ipaddr ='$ip'";
-     $resultdlt=mysqli_query($con,$emptycart);
-    
 
 
 
