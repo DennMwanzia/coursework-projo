@@ -9,10 +9,13 @@ $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
 // ENCRIPT  DATA TO GET PASSWORD
 $Password = base64_encode($BusinessShortCode . $passkey . $Timestamp);
-$phone = '254717183155';//phone number to receive the stk push
-$money = '1';
+
+$phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+$money = isset($_POST['amount']) ? trim($_POST['amount']) : '';
+//$phone = '254717183155';//phone number to receive the stk push
+$money = $money;
 $PartyA = $phone;
-$PartyB = '25417183155';
+//$PartyB = '25417183155';
 $AccountReference = 'Flash Solutions';
 $TransactionDesc = 'stkpush test';
 $Amount = $money;
