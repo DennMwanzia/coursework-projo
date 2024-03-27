@@ -39,7 +39,7 @@ include('../commonfun/commonfunkies.php')
             
                 <div class="mt-4 pt-2">
                     <input type="submit" value="Login" class="bg-info py-2 px-3 border-0 " name="userlog">
-                    <p class="small fw-bold mt-2 pt-1 mb-0">Dont have an account ? <a href="sign.php" class="text-danger">Register</a></p>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">Dont have an account ? <a href="signup.php" class="text-danger">Register</a></p>
                 </div>
             </form>
         </div>
