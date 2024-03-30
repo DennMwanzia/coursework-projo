@@ -34,7 +34,7 @@ session_start();
         if(!isset($_SESSION['username'])){
           echo "
           <li class='nav-item'>
-          <a class='nav-link' href='./userarea/profile.php'></a>
+          <a cl ass='nav-link' href='./userarea/profile.php'></a>
         </li>";
         }
         echo "

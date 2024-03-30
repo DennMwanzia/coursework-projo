@@ -22,6 +22,7 @@
         <th>SIno</th>
         <th>Amount</th>
         <th>Invoice number</th>
+        <th>Date</th>
         <th>Delete</th>
     </tr> 
     </thead>
@@ -37,8 +38,8 @@
         $number++;
         echo"<tr>
         <td>$number</td>
+        <td>$amt</td>
         <td>$inv</td>
-        <td$amt</td>
         <td>$date</td>
         <td><a href='index.php?dltorders= $orderid' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
     </tr>";

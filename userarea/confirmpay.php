@@ -68,7 +68,7 @@ if(isset($_POST ['confirmpayment'])){
             </div>
             <div class="form-outline my-4 text-center w-50 m-auto">
             <label for="amount" class="form-label">Amount (Ksh):</label>
-            <input type="number" id="amount" name="amount" min="1" value="<?php echo $amountdue ?>" readonly class="form-control w-50 m-auto">
+            <input type="number" id="amount" name="amount" min="1" value="<?php echo $amountdue ?>" class="form-control w-50 m-auto">
             </div>
 
             <div class="form-outline my-4 text-center w-50 m-auto">

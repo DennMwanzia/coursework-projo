@@ -1,6 +1,7 @@
 <?php
+session_start();
  include('../includes/database.php');
- include('../commonfun/commonfunkies.php');
+
  
  ?>
 <html lang="en">
@@ -22,7 +23,17 @@
         <nav class="navbar nav-expand-lg navbar-light bg-info">
             <ul class ="navbar-nav">
                 <li class="nav-item">
-                    <a href="" class="nav-link">welcome </a>
+                    <a href="" class="nav-link"> <?php 
+                    if(!isset($_SESSION['username'])){
+                     echo "<li class='nav-item'>
+                     <a class='nav-link' href='#'> Welcome 
+                     </a> </li>";
+      
+                    }else{
+                      echo "<li class='nav-item'>
+                     <a class='nav-link' href='#'> Welcome  ".$_SESSION['username']."</a> </li>"; 
+
+                     }?> </a>
                 </li>
 
             </ul>
@@ -34,18 +45,42 @@
     <div class="bg-light">
         <h3 class="text-center p-2">Manage details</h3>
         <div class="row">
-            <div class="col-md-12 bg-secondary p-1 d-flex align-items-center">
-                <a href="#"><img src="" alt="" class="adminimg"></a>
-                <p class="text-light text-center m-3">Admin name</p>
+            <div class="col-md-12 bg-secondary p-1 mx-2 d-flex align-items-center">
+                
+                <p class="text-light text-center m-3">
+                    <?php 
+                    if(!isset($_SESSION['username'])){
+                     echo "Welcome";
+      
+                    }else{
+                      echo "<li class='nav-item'>
+                    <a class='nav-link' href='#'> What are you upto..? ".$_SESSION['username']."</a> </li>"; 
+
+                     }?>
+                    </p>
                 <div class="button text-center">
-                <button><a href="insertproducts.php" class="bg-info border-0 p-2 my-2"> Insert  product</a></button>
-                <button><a href="index.php?viewproducts" class="nav-lin text-light bg-info my-1">View products</a></button>
-                <button><a href="index.php?insert_category" class="nav-lin text-light bg-info my-1">Insert Categories</a></button>
-                <button><a href="index.php?viewcategories" class="nav-lin text-light bg-info my-1">View categories</a></button>
-                <button><a href="index.php?listorders" class="nav-lin text-light bg-info my-1">All orders</a></button>
-                <button><a href="index.php?allpays" class="nav-lin text-light bg-info my-1">All payments</a></button>
-                <button><a href="index.php?listuser" class="nav-lin text-light bg-info my-1">List users</a></button>
-                <button><a href="" class="nav-lin text-light bg-info my-1">Log out</a></button>
+                <button class="bg-info border-0 p-2 my-2 mx-2 text-light"><a href="insertproducts.php" class="bg-info border-0 p-2 my-2 text-light"> Insert  product</a></button>
+                <button class="bg-info border-0 p-2 my-2 text-light mx-2"><a href="index.php?viewproducts" class="bg-info border-0 p-2 my-2 text-light">View products</a></button>
+                <button class="bg-info border-0 p-2 my-2 text-light mx-2"><a href="index.php?insert_category" class="bg-info border-0 p-2 my-2 text-light">Insert Categories</a></button>
+                <button class="bg-info border-0 p-2 my-2 text-light mx-2"><a href="index.php?viewcategories" class="bg-info border-0 p-2 my-2 text-light">View categories</a></button>
+                <button class="bg-info border-0 p-2 my-2 text-light mx-2"><a href="index.php?listorders" class="bg-info border-0 p-2 my-2 text-light" >All orders</a></button>
+                <button class="bg-info border-0 p-2 my-2 text-light mx-2"><a href="index.php?allpays" class="bg-info border-0 p-2 my-2 text-light">All payments</a></button>
+                <button class="bg-info border-0 p-2 my-2 text-light mx-2"><a href="index.php?listuser" class="bg-info border-0 p-2 my-2 text-light">List users</a></button>
+                <button class="bg-info border-0 p-2 my-2 text-light"><a href="" class="bg-info border-0 p-2 my-2">
+                <?php
+   
+
+                 if(!isset($_SESSION['username'])){
+                  echo "<li class='nav-item'>
+                     <a class='nav-link' href='adminlogin.php'> Log in
+                     </a>";
+                    }else{
+                  echo "<li class='nav-item'>
+                  <a class='nav-link' href='left.php'> Log out
+                 </a>";
+
+    } ?>
+            </button>
             </div>
                  
             </div>

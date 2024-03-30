@@ -19,11 +19,12 @@
         echo "<h2 class=' text-danger text-center mt-5'>No users yet.</h2>";
     }else{
         echo "<tr>
-        <th>User id/th>
+        <th>User id</th>
         <th>Username</th>
         <th>Email</th>
         <th>Address</th>
-        <thPhone number</th>
+        <th>Phone number</th>
+        <th>Remove </th>
 
     </tr> 
     </thead>
@@ -40,7 +41,7 @@
         echo"<tr>
         <td>$number</td>
         <td>$username</td>
-        <td$useremail</td>
+        <td>$useremail</td>
         <td>$address</td>
         <td>$phone</td>
         <td><a href='index.php?dltorders= $userid' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
