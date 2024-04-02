@@ -51,10 +51,10 @@ include('../includes/database.php');
 </html>
 <?php
 if(isset($_POST['adminlogin'])){
-    $storeusername =$_POST['username'];
+    $username =$_POST['username'];
     $storepass = $_POST['password'];
   
-    $selectquery = "select * from adminreg where username ='$storeusername'";
+    $selectquery = "select * from adminreg where username ='$username'";
     $result=mysqli_query($con,$selectquery);
     $rowcount =mysqli_num_rows($result);
     $rowdata =mysqli_fetch_assoc ($result);
@@ -62,7 +62,8 @@ if(isset($_POST['adminlogin'])){
 
     if($rowcount > 0){
         if(password_verify($storepass, $rowdata['password'])){
-            $_SESSION['username'] = $storeusername;
+           // $_SESSION['username'] = $username;
+            $_SESSION['admin_name'] = $rowdata['name'];
             echo "<script>alert('Success!')</script>";
             echo "<script>window.open('index.php','_self')</script>";
         } else {

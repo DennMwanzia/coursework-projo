@@ -21,6 +21,11 @@ include('../includes/database.php');
              Admin registration
         </h2>
         <form action="" method="post">
+        <div class="form-outline mb-4 w-50 m-auto">
+                <label for="username" class ="form-label">Name</label>
+                <input type="text"id="username" name="name" value="" required class="form-control"  autocomplete="off">
+
+            </div>
             <div class="form-outline mb-4 w-50 m-auto">
                 <label for="username" class ="form-label">Username</label>
                 <input type="text"id="username" name="username" value="" required class="form-control" placeholder="enter your username" autocomplete="off">
@@ -66,6 +71,7 @@ if (isset($_POST['adminreg'])){
     $pass =$_POST['password'];
     $hashing =password_hash($pass,PASSWORD_DEFAULT);
     $confirm=$_POST['confirm'];
+    $name=$_POST['name'];
     
     $selectquery="select * from adminreg where username ='$uusername' or email ='$email'";
     $result =mysqli_query($con,$selectquery);
@@ -79,7 +85,7 @@ if (isset($_POST['adminreg'])){
 
     }
     else{
-        $insert = "insert into adminreg (username,email,password) values('$uusername','$email','$hashing')";
+        $insert = "insert into adminreg (username,email,password,name) values('$uusername','$email','$hashing','$name')";
 
         $resultquery =mysqli_query($con,$insert);
         if($resultquery){

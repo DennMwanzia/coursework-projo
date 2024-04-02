@@ -24,14 +24,14 @@ session_start();
             <ul class ="navbar-nav">
                 <li class="nav-item">
                     <a href="" class="nav-link"> <?php 
-                    if(!isset($_SESSION['username'])){
+                    if(!isset($_SESSION['admin_name'])){
                      echo "<li class='nav-item'>
                      <a class='nav-link' href='#'> Welcome 
                      </a> </li>";
       
                     }else{
                       echo "<li class='nav-item'>
-                     <a class='nav-link' href='#'> Welcome  ".$_SESSION['username']."</a> </li>"; 
+                     <a class='nav-link' href='#'> Welcome  ".$_SESSION['admin_name']."</a> </li>"; 
 
                      }?> </a>
                 </li>
@@ -54,7 +54,7 @@ session_start();
       
                     }else{
                       echo "<li class='nav-item'>
-                    <a class='nav-link' href='#'> What are you upto..? ".$_SESSION['username']."</a> </li>"; 
+                    <a class='nav-link' href='#'> What are you upto..? ".$_SESSION['admin_name']."</a> </li>"; 
 
                      }?>
                     </p>
@@ -70,7 +70,7 @@ session_start();
                 <?php
    
 
-                 if(!isset($_SESSION['username'])){
+                 if(!isset($_SESSION['admin_name'])){
                   echo "<li class='nav-item'>
                      <a class='nav-link' href='adminlogin.php'> Log in
                      </a>";

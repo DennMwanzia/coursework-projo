@@ -58,7 +58,9 @@
         <td>$invoiceno</td>
         <td>$orderdate</td>
         <td>$orderstatus</td>";
+        $number++;
         }?>
+       
         <?php
         if($orderstatus=="paid"){
             echo "<td>Paid</td>";
@@ -67,7 +69,7 @@
           </tr>" ;
         }
         
-     $number++;
+     
 
      ?>
     
